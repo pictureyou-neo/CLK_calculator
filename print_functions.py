@@ -52,7 +52,17 @@ def print_step4() :
     print(P + "             (default)" + W)
     print_delimiter()
 
-def print_calculation() :
+def print_step5() :
     print_delimiter()
-    print(G + "under calculation..." + W)
+    print(G + "Step5 : Calculation" + W)
     print_delimiter()
+
+def print_step6() :
+    print_delimiter()
+    print(G + "Step6 : Result" + W)
+    print(G + "        Suggestion (random) = s" + W)
+    print(G + "        See all available   = a" + W)
+    print_delimiter()
+
+def print_result(num, mfd, prediv, rfdphi ) :
+    print("[",num,"th ] =>  MFD :"+B, mfd, W+"  PREDIV :"+B, prediv, W+"  RFDPHI"+B, rfdphi, W+"")
