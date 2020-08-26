@@ -32,37 +32,47 @@ def print_step1() :
     print(G + "        CH2M = 2, CH4M = 4" + W)
     print_delimiter()
 
-def print_step2() :
+def print_step2():
     print_delimiter()
-    print(G + "Step2 : Select system clock source" + W)
-    print(G + "        irc,   xosc,   pll0,   pll1" + W)
-    print(P + "                             (default)" + W)
-    print_delimiter()
-
-def print_step3() :
-    print_delimiter()
-    print(G + "Step3 : Specify target system clock" + W)
-    print(G + "        CH2M = max. 120Mhz, CH4M = max. 180Mhz" + W)
-    print_delimiter()
-
-def print_step4() :
-    print_delimiter()
-    print(G + "Step4 : Select pll 0 clock source" + W)
+    print(G + "Step2 : Select pll 0 clock source" + W)
     print(G + "        irc,   xosc" + W)
     print(P + "             (default)" + W)
     print_delimiter()
 
+def print_step3():
+    print_delimiter()
+    print(G + "Step3 : Select pll 1 clock source" + W)
+    print(G + "        xosc,  pll0_phi1" + W)
+    print(P + "               (default)" + W)
+    print_delimiter()
+
+def print_step4() :
+    print_delimiter()
+    print(G + "Step4 : Select system clock source" + W)
+    print(G + "        irc,   xosc,   pll0,   pll1" + W)
+    print(P + "                             (default)" + W)
+    print_delimiter()
+
 def print_step5() :
     print_delimiter()
-    print(G + "Step5 : Calculation" + W)
+    print(G + "Step5 : Specify target system clock" + W)
+    print(G + "        CH2M = max. 120Mhz, CH4M = max. 180Mhz" + W)
     print_delimiter()
 
 def print_step6() :
     print_delimiter()
-    print(G + "Step6 : Result" + W)
+    print(G + "Step6 : Calculation" + W)
+    print_delimiter()
+
+def print_step7() :
+    print_delimiter()
+    print(G + "Step7 : Result" + W)
     print(G + "        Suggestion (random) = s" + W)
     print(G + "        See all available   = a" + W)
     print_delimiter()
 
-def print_result(num, mfd, prediv, rfdphi ) :
-    print("[",num,"th ] =>  MFD :"+B, mfd, W+"  PREDIV :"+B, prediv, W+"  RFDPHI"+B, rfdphi, W+"")
+def print_result_pll0(num, mfd, prediv, rfdphi ) :
+    print("[ PLL0 :",num,"th ] =>  MFD :"+B, mfd, W+"  PREDIV :"+B, prediv, W+"  RFDPHI"+B, rfdphi, W+"")
+
+def print_result_pll1(num, mfd, prediv, rfdphi ) :
+    print("[ PLL1 :",num,"th ] =>  MFD :"+B, mfd, W+"  PREDIV :"+B, prediv, W+"  RFDPHI"+B, rfdphi, W+"")
